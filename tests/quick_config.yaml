@@ -1,0 +1,13 @@
+# Override used only for the synthetic smoke test (fast, writes to tests/_synthetic/).
+data:
+  path: tests/_synthetic/weatherAUS_synthetic.csv
+paths:
+  splits: tests/_synthetic/splits
+  results: tests/_synthetic/results
+lightgbm:
+  n_estimators: 60
+early_stopping_rounds: 10
+isolation_forest:
+  n_estimators: 50
+bootstrap:
+  n_resamples: 200

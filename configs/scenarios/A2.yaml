@@ -1,0 +1,6 @@
+code: A2
+description: "LightGBM + Temporal Lag"
+temporal_lag: true
+smotenc: false
+treatment: none   # none | iqr | zscore | isolation_forest
+expected_features: 51

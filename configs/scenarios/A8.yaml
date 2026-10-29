@@ -1,0 +1,6 @@
+code: A8
+description: "LightGBM + Temporal Lag + Z-score Capping + SMOTENC"
+temporal_lag: true
+smotenc: true
+treatment: zscore   # none | iqr | zscore | isolation_forest
+expected_features: 51

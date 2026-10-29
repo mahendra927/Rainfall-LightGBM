@@ -1,0 +1,14 @@
+# Exploratory, validation-only sensitivity analysis (chronological training/validation subsets).
+# These runs did NOT modify the predefined settings of the principal A1-A8 experiments.
+lag_depth:
+  scenario: A4
+  values: [1, 2, 3, 5]          # depth d uses lags 1..d
+isolation_forest_contamination:
+  scenario: A6
+  values: [0.02, 0.05, 0.08, 0.10]
+zscore_threshold:
+  scenario: A8
+  values: [2.0, 2.5, 3.0]
+max_estimators:
+  scenario: A4
+  values: [600, 900, 1200]

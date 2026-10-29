@@ -1,0 +1,16 @@
+{
+  "title": "Code and results for: Evaluating Temporal Feature Engineering and Data-Quality Treatments for LightGBM-Based Rainfall Occurrence Classification",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "description": "<p>Reproducibility materials for the JESSI article. Includes the preprocessing implementation (target-leakage exclusion, chronological lag-feature generation on exact calendar days, training-based imputation, SMOTENC, IQR and Z-score capping, Isolation Forest filtering), the exact chronological and five stratified partitions stored as Location-Date keys, the A1-A8 scenario configurations and LightGBM hyperparameters, test-set predictions of every scenario, and the code and outputs of the paired weekly block bootstrap, exploratory Wilcoxon signed-rank tests with Holm correction, validation-only sensitivity analysis, and rainfall-intensity error analysis. The WeatherAUS dataset is not redistributed.</p>",
+  "creators": [
+    {"name": "Dana Wijaya, Putu Agus Putra", "affiliation": "Institut Teknologi dan Bisnis STIKOM Bali"},
+    {"name": "Pradipta, Gede Angga", "affiliation": "Institut Teknologi dan Bisnis STIKOM Bali"},
+    {"name": "Huizen, Roy Rudolf", "affiliation": "Institut Teknologi dan Bisnis STIKOM Bali"}
+  ],
+  "license": "MIT",
+  "keywords": ["rainfall occurrence classification", "LightGBM", "temporal lag features", "SMOTENC", "Isolation Forest", "data quality", "WeatherAUS", "reproducibility"],
+  "related_identifiers": [
+    {"identifier": "https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package", "relation": "references", "resource_type": "dataset"}
+  ]
+}

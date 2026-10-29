@@ -1,0 +1,21 @@
+{
+  "sha256": "573fd715cd69fcacc4df32024d823b450ae3edaae7e8ff2eeb623adbed424014",
+  "rows_total": 145460,
+  "columns_total": 23,
+  "rows_missing_target": 3261,
+  "rows_labelled": 142199,
+  "class_counts": {
+    "No": 110319,
+    "Yes": 31880
+  },
+  "locations": 49,
+  "date_min": "2007-11-01",
+  "date_max": "2017-06-25",
+  "duplicated_location_date_pairs": 0,
+  "intervals_longer_than_one_day": 143,
+  "intervals_longer_than_one_day_labelled_rows": 1537,
+  "pressure_999_9_hpa_count": {
+    "Pressure9am": 35,
+    "Pressure3pm": 49
+  }
+}

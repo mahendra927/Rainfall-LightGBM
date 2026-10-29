@@ -1,0 +1,6 @@
+code: A3
+description: "LightGBM + SMOTENC"
+temporal_lag: false
+smotenc: true
+treatment: none   # none | iqr | zscore | isolation_forest
+expected_features: 18

@@ -1,0 +1,6 @@
+code: A4
+description: "LightGBM + Temporal Lag + SMOTENC"
+temporal_lag: true
+smotenc: true
+treatment: none   # none | iqr | zscore | isolation_forest
+expected_features: 51

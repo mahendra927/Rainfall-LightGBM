@@ -1,0 +1,7 @@
+"""Column order of the WeatherAUS dataset (23 attributes)."""
+WEATHERAUS_COLUMNS = [
+    "Date", "Location", "MinTemp", "MaxTemp", "Rainfall", "Evaporation", "Sunshine",
+    "WindGustDir", "WindGustSpeed", "WindDir9am", "WindDir3pm", "WindSpeed9am",
+    "WindSpeed3pm", "Humidity9am", "Humidity3pm", "Pressure9am", "Pressure3pm",
+    "Cloud9am", "Cloud3pm", "Temp9am", "Temp3pm", "RainToday", "RainTomorrow",
+]

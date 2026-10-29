@@ -1,0 +1,81 @@
+# Base configuration reproducing the settings reported in the manuscript.
+# All paths are relative to the repository root.
+
+paths:
+  splits: data/splits
+  results: results
+
+data:
+  path: data/raw/weatherAUS.csv
+  target: RainToday            # retrospective same-day rainfall occurrence
+  positive_label: "Yes"
+  # Excluded from predictors to prevent direct target leakage
+  exclude_from_predictors: [Rainfall, RainToday, RainTomorrow]
+  # Retained as metadata only (lag generation, partitioning, location analysis)
+  metadata: [Location, Date]
+  categorical: [WindGustDir, WindDir9am, WindDir3pm]
+
+lag_features:
+  variables: [Humidity3pm, Humidity9am, Pressure9am, Pressure3pm, WindGustSpeed,
+              WindSpeed9am, WindSpeed3pm, Cloud9am, Cloud3pm, Sunshine, Evaporation]
+  lags: [1, 2, 3]              # exact previous calendar days
+  # Table the historical values are taken from:
+  #   labelled = only rows with a RainToday label (142,199 rows)
+  #   raw      = all 145,460 rows, so lags may use predictors recorded on unlabelled days
+  source: labelled
+
+chronological:
+  train_end: "2015-01-12"      # Nov. 1, 2007 - Jan. 12, 2015
+  validation_end: "2016-04-08" # Jan. 13, 2015 - Apr. 8, 2016; test: Apr. 9, 2016 - Jun. 25, 2017
+  seed: 42
+
+stratified:
+  seeds: [42, 52, 62, 72, 82]
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+
+lightgbm:
+  n_estimators: 900
+  learning_rate: 0.03
+  num_leaves: 63
+  max_depth: -1
+  min_child_samples: 30
+  subsample: 0.85
+  subsample_freq: 1
+  colsample_bytree: 0.85
+  objective: binary
+  n_jobs: -1
+  verbose: -1
+early_stopping_rounds: 60
+decision_threshold: 0.50
+
+smotenc:
+  sampling_strategy: 0.80
+  k_neighbors: 5
+
+iqr:
+  k: 1.5
+  apply_to: all                # bounds estimated on training data; "all" = applied to train/val/test
+
+zscore:
+  threshold: 3.0
+  apply_to: all
+
+isolation_forest:
+  n_estimators: 300
+  contamination: 0.08          # applied to training observations only
+
+bootstrap:
+  n_resamples: 1500
+  seed: 2026
+  reference: A7
+  confidence: 0.95
+
+wilcoxon:
+  reference: A1                # each scenario is compared with this one
+  alpha: 0.05
+
+error_analysis:
+  scenario: A7
+  intensity_bins: [1, 2, 5, 10, 20, 50]   # mm; last bin is "> 50 mm"

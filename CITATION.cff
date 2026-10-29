@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the article and this archive."
+title: "Code and results for: Evaluating Temporal Feature Engineering and Data-Quality Treatments for LightGBM-Based Rainfall Occurrence Classification"
+version: 1.0.0
+date-released: 2026-11-01
+license: MIT
+repository-code: "https://github.com/<username>/rainfall-lightgbm-temporal"
+keywords: [rainfall occurrence classification, LightGBM, temporal lag features, SMOTENC, Isolation Forest, data quality, WeatherAUS]
+authors:
+  - family-names: "Dana Wijaya"
+    given-names: "Putu Agus Putra"
+    affiliation: "Institut Teknologi dan Bisnis STIKOM Bali"
+    email: "242012014@stikom-bali.ac.id"
+  - family-names: "Pradipta"
+    given-names: "Gede Angga"
+    affiliation: "Institut Teknologi dan Bisnis STIKOM Bali"
+  - family-names: "Huizen"
+    given-names: "Roy Rudolf"
+    affiliation: "Institut Teknologi dan Bisnis STIKOM Bali"
+preferred-citation:
+  type: article
+  title: "Evaluating Temporal Feature Engineering and Data-Quality Treatments for LightGBM-Based Rainfall Occurrence Classification"
+  journal: "Journal of Embedded System Security and Intelligent Systems"
+  authors:
+    - family-names: "Dana Wijaya"
+      given-names: "Putu Agus Putra"
+    - family-names: "Pradipta"
+      given-names: "Gede Angga"
+    - family-names: "Huizen"
+      given-names: "Roy Rudolf"
+  year: 2026

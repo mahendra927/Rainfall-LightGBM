@@ -1,0 +1,19 @@
+# raw data is not redistributed
+data/raw/*
+!data/raw/.gitkeep
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+# smoke-test outputs
+tests/_synthetic/
+# models (optional; predictions are sufficient for verification)
+*.pkl
+*.joblib
+models/
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+code: A1
+description: "Baseline LightGBM"
+temporal_lag: false
+smotenc: false
+treatment: none   # none | iqr | zscore | isolation_forest
+expected_features: 18

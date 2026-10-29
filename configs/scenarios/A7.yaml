@@ -1,0 +1,6 @@
+code: A7
+description: "LightGBM + Temporal Lag + IQR Capping + SMOTENC"
+temporal_lag: true
+smotenc: true
+treatment: iqr   # none | iqr | zscore | isolation_forest
+expected_features: 51
